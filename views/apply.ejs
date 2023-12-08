@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SideBar</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="/Users/mohdsahil/My Projects/SideBar_Using_HTML&CSS/style.css"
+    />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="formcss.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="full-home-page">
+        <div class="sidebar">
+          <input type="checkbox" name="checkbox" id="check" />
+          <div class="btn_one">
+            <label for="check">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </div>
+          <div class="sidebar_menu">
+          <div class="logo">
+            <a href="#">GatePass</a>
+          </div>
+          <div class="btn_two">
+            <label for="check">
+              <i class="fa-solid fa-xmark"></i>
+            </label>
+          </div>
+          <div class="menu">
+            
+              <div class="hover">
+                  <i class="fa-solid fa-house"><a href="#"></a></i>
+                  <div style="display: flex;"  id="responsive">
+                    <a class="res"  href="http://localhost:8080/studenthome">Home</a>
+                  </div>
+                  
+              </div>
+              <div class="hover">
+                  <i class="fa-solid fa-right-from-bracket"><a href="#"></a></i>
+                  <div style="display: flex;"  id="responsive">
+                    <a class="res" href="http://localhost:8080/">Log Out</a>
+                  </div>
+              </div>
+
+        </div>
+        </div>
+        </div>
+        <div class="sidebar-side">
+            <div class="Registration Form text-center my-1">
+                <h1 class="GatePassregistration-text">GatePass Registration</h1>
+
+                <form action="/deshboard" method="post" class="my-1">
+                    <div class="flex my-1">
+                        <div class="justify-content">
+                            <label class="label" for="fName">First Name</label>
+                            <input class="my-1 input" type="text" name="fName" id="fName" placeholder="Enter Your FirstName" required>
+                        </div>
+                        <div class="justify-content">
+                            <label class="label" for="mName">Middle Name</label>
+                            <input class="my-1 input" type="text" name="mName" id="mName" placeholder="Enter Your MiddleName">
+                        </div>
+                    </div>
+                    <div class="flex my-1">
+                        <div>
+                            <label class="label" for="lName">Last Name</label>
+                            <input class="my-1 input" type="text" name="lName" id="lName"placeholder="Enter Your LastName" required>
+                        </div>
+                        <div>
+                            <label class="label" for="name">Hostel Name</label>
+                            <select class="my-1 select" name="hName" id="name" required>
+                                <option value="Select Your Hostel">Select Your Hostel</option>
+                                <option value="Nek-Chand Tower(N.C.) - 1">Nek-Chand Tower(N.C.) - 1</option>
+                                <option value="Nek-Chand Tower(N.C.) - 2">Nek-Chand Tower(N.C.) - 2</option>
+                                <option value="Nek-Chand Tower(N.C.) - 3">Nek-Chand Tower(N.C.) - 3</option>
+                                <option value="Nek-Chand Tower(N.C.) - 4">Nek-Chand Tower(N.C.) - 4</option>
+                                <option value="Nek-Chand Tower(N.C.) - 5">Nek-Chand Tower(N.C.) - 5</option>
+                                <option value="Nek-Chand Tower(N.C.) - 6">Nek-Chand Tower(N.C.) - 6</option>
+                                <option value="Zakir - A">Zakir - A</option>
+                                <option value="Zakir - B">Zakir - B</option>
+                                <option value="Zakir - C">Zakir - C</option>
+                                <option value="Zakir - D">Zakir - D</option>
+                                <option value="Sukhna - Hostel">Sukhna - Hostel</option>
+                                <option value="Tagore - Hostel">Tagore - Hostel</option>
+                                <option value="Shivalik - Hostel">Shivalik - Hostel</option>
+                                <option value="Le Corbusier(L.C.) - Hostel">Le Corbusier(L.C.) - Hostel</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex my-1">
+                        <div>
+                            <label class="label" for="roomNo">Room No</label>
+                            <input class="my-1 input" type="number" name="rNO" id="roomNo" placeholder="Enter Your RoomNo" required>
+                        </div>
+                        <div>
+                            <label class="label" for="mode">Mode of Pass</label>
+                            <select class="my-1 select" name="mode" id="mode" required>
+                                <option value="Select your mode">Select your mode of pass</option>
+                                <option value="Day">Day Pass</option>
+                                <option value="Night">Night Pass</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex my-1">
+                        <div>
+                            <label class="label" for="visit">Purpose of visit</label>
+                            <input class="my-1 input" type="text" name="pOV" id="visit" placeholder="Enter Place of Visit" required>
+                        </div>
+                        <div>
+                            <label class="label" for="time">Time out</label>
+                            <input class="my-1 date-time" type="datetime-local" name="time" id="time" required>
+                        </div>
+                    </div>
+                    <div class="btn-center">
+                        <button class="btn" type="submit">Submit</button>
+                      </div>
+                </form>
+        </div>
+      </div>
+    </div>
+  
+  </body>
+</html>
