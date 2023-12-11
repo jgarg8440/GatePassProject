@@ -11,6 +11,8 @@ html, body {
     height: 100%;
     width: 100%;
     list-style: none;
+    background-color: #F9F7F7;
+  
   }
   .sidebar{
     height: 100%;
@@ -37,6 +39,7 @@ html, body {
     display: flex;
     height: 100%;
     width: 100%;
+    
   }
   
   .main_box{
@@ -303,6 +306,11 @@ html, body {
     align-items: center;
     display: flex;
     justify-content: center;
+  }
+  .Student-status{
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(8, 69, 71);
   }
     @media (max-width: 554px) {
 

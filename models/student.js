@@ -55,6 +55,9 @@ const studentSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
+    Status: {
+        type: String,
+    }
 })
 
 const studentData = mongoose.model("studentData", studentSchema);

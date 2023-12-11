@@ -65,7 +65,7 @@
           <div class="information-deshboard">
             <div class="id-date">
               <div class="id">
-                  <p> <%=studata._id%></p>
+                  <p name = "id"> <%=studata._id%></p>
                </div>
                 <div class="date">
                   <p><%= new Date(studata.time).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %>
@@ -99,8 +99,19 @@
             <div class="psssed-or-not">
               <div class="btn-center">
                 <div class="btn">
-                  <button class="bttn accept">Accept</button>
-                  <button class="bttn reject">Reject</button>
+
+                  <% if(studata.Status == 'pending') { %>
+                  <form action="/ward" method="post" class="my-1">
+                    <input type="hidden" name="id" value="<%= studata._id %>" />
+                  <select class="my-1 select" name="decision" id="decision" required>
+                    <option value="decision">Warden-Approval</option>
+                    <option value="Approve">Approve</option>
+                    <option value="Reject">Reject</option>
+                  </select>
+                    <button class="button" type="submit">Submit</button>
+                    </form>
+                    <%  }  %>
+                 
                 </div>
                 <div>
                   <p class="warupdsta"></p>

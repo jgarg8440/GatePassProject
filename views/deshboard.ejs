@@ -61,7 +61,7 @@
         </div>
           <div class="full-conatiner">
      <% for(let studata of studat){ %>
-       
+      
           <div class="information-deshboard">
             <div class="id-date">
               <div class="id">
@@ -96,12 +96,13 @@
                  </div>
               </div>
             </div>
-            <div class="psssed-or-not">
-                 <div class="psssed-or-not-text">
-                  <p class="update">Kindly await warden confirmation before proceeding.
-                  </p>
-                 </div>
-            </div>
+              <div class="psssed-or-not">
+                <div class="psssed-or-not-text">
+                  <p class="Student-status"><%= studata.Status %></p>  
+                </div>
+              </div>
+        
+            
           </div>
         
      <% } %> 

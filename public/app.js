@@ -1,3 +1,4 @@
+
 const bttn = document.querySelectorAll(".bttn");
 // Add a click event listener to each button
 bttn.forEach(btn => {

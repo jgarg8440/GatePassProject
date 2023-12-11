@@ -168,6 +168,21 @@ html, body {
     flex-direction: row; 
 
   }
+.select{
+  font-size: 18px;
+}
+.button{
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #78c776;
+}
+.button:hover{
+  font-size: 17px;
+  border-radius: 4px;
+  background-color: #4bb049;
+  cursor: pointer;
+}
+
   @media (max-width: 1155px)  {
     .sidebar_menu {
       width: 200px;
