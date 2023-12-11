@@ -50,11 +50,25 @@ To run the project locally, follow these steps:
    Use the provided features for user registration, gate pass issuance, and reporting.
    
 5.Technologies Used
-     HTML
-     CSS
-     JavaScript
-     EJS (Embedded JavaScript)
-     Node.js
-     Express.js
-     MongoDB
+     HTML,
+     CSS,
+     JavaScript,
+     EJS (Embedded JavaScript),
+     Node.js,
+     Express.js,
+     MongoDB,
 
+#Login Page
+![Screenshot 2023-12-11 191824](https://github.com/jgarg8440/GatePass/assets/102863455/270d06e1-b19d-429f-a6e2-19970dfb1568)
+
+#Signin Page
+   ![Screenshot 2023-12-11 191844](https://github.com/jgarg8440/GatePass/assets/102863455/6d905100-211a-4847-b49c-8c4de7ec219e)
+
+#Home Page
+![Screenshot 2023-12-11 191904](https://github.com/jgarg8440/GatePass/assets/102863455/82d4c5aa-2f19-402a-a8ea-13d95bbce045)
+
+#Apply Pass
+![Screenshot 2023-12-11 191920](https://github.com/jgarg8440/GatePass/assets/102863455/f89fb4bb-242f-4efa-bfa3-68f18e661406)
+
+#DeshBoard
+![Screenshot 2023-12-11 191942](https://github.com/jgarg8440/GatePass/assets/102863455/1b30e962-48f5-4ca1-93ae-bde1f3ebd73a)
