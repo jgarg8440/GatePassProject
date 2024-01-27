@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 const studentData = require('./models/student');
 // const Approvemodel = require('./models/Approve');
-const PORT = preocess.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // Connection in mongodb
 
