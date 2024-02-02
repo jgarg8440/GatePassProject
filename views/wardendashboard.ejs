@@ -1,129 +1,122 @@
+<!-- views/admin-gate-passes.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SideBar</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="/Users/mohdsahil/My Projects/SideBar_Using_HTML&CSS/style.css"
-    />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="warderndashboard.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&family=Ubuntu&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="main">
-      <div class="full-home-page">
-        <div class="sidebar">
-          <input type="checkbox" name="checkbox" id="check" />
-          <div class="btn_one">
-            <label for="check">
-              <i class="fa-solid fa-bars"></i>
-            </label>
-          </div>
-          <div class="sidebar_menu">
-            <div class="logo">
-              <a href="#">GatePass</a>
-            </div>
-            <div class="btn_two">
-              <label for="check">
-                <i class="fa-solid fa-xmark"></i>
-              </label>
-            </div>
-            <div class="menu">
-              <div class="hover">
-                <i class="fa-solid fa-house"><a href="#"></a></i>
-                <div style="display: flex" id="responsive">
-                  <a class="res" href="http://localhost:8080/wardenhome">Home</a>
-                </div>
-              </div>
-              <div class="hover">
-                <i class="fa-solid fa-right-from-bracket"><a href="#"></a></i>
-                <div style="display: flex" id="responsive">
-                  <a class="res" href="http://localhost:8080/">Log Out</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          <div class="full-conatiner">
-     <% for(let studata of studat){ %>
-       
-          <div class="information-deshboard">
-            <div class="id-date">
-              <div class="id">
-                  <p name = "id"> <%=studata._id%></p>
-               </div>
-                <div class="date">
-                  <p><%= new Date(studata.time).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %>
-                  </p>
-                </div>
-            </div>
-            <div>
-              <div class="all-information">
-                <div class="name">
-                  <p>Name:</p>
-                   <p><%=studata.fName%> <%=studata.mName%> <%=studata.lName%></p>
-                </div>
-                 <div class="hname">
-                  <p>Hostel:</p>
-                    <p><%=studata.hName%></p>
-                 </div>
-                 <div class="room">
-                    <p>Room No.:</p>
-                    <p><%=studata.rNO%></p>
-                 </div>
-                 <div class="mode">
-                   <p>Pass Mode:</p>
-                   <p> <%=studata.mode%></p>
-                 </div>
-                 <div class="pov"> 
-                   <p>Visited</p>
-                   <p><%=studata.pOV%></p>
-                 </div>
-              </div>
-            </div>
-            <div class="psssed-or-not">
-              <div class="btn-center">
-                <div class="btn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Gate Passes</title>
+    <style>
+        /* Styles for the table and select (you can customize as needed) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
 
-                  <% if(studata.Status == 'pending') { %>
-                  <form action="/ward" method="post" class="my-1">
-                    <input type="hidden" name="id" value="<%= studata._id %>" />
-                  <select class="my-1 select" name="decision" id="decision" required>
-                    <option value="decision">Warden-Approval</option>
-                    <option value="Approve">Approve</option>
-                    <option value="Reject">Reject</option>
-                  </select>
-                    <button class="button" type="submit">Submit</button>
-                    </form>
-                    <%  }  %>
-                 
-                </div>
-                <div>
-                  <p class="warupdsta"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-     <% } %> 
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    </div>
-      </div>
-    </div>
-    <script src="app.js"></script>
-  </body>
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Admin Gate Passes</h2>
+
+    <% if (gatePasses.length > 0) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Purpose</th>
+                    <th>Date Time</th>
+                    <th>User</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% gatePasses.forEach(gatePass => { %>
+                    <tr>
+                        <td><%- gatePass.place %></td>
+                        <td><%- gatePass.purpose %></td>
+                        <td><%- gatePass.dateTime %></td>
+                        <td><%- gatePass.rollNumber %></td>
+                        <td><%- gatePass.status %></td>
+                        <td>
+                            <select id="status" name="status" onchange="updateStatus('<%- gatePass._id %>')">
+                                <option value="new" <% if (gatePass.status === 'new') { %> selected <% } %>>New</option>
+                                <option value="approve" <% if (gatePass.status === 'approve') { %> selected <% } %>>Approve</option>
+                                <option value="reject" <% if (gatePass.status === 'reject') { %> selected <% } %>>Reject</option>
+                            </select>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No gate passes found.</p>
+    <% } %>
+
+    <script>
+        function updateStatus(gatePassId) {
+            const selectElement = document.getElementById('status');
+            const selectedStatus = selectElement.value;
+
+            // Use AJAX or fetch to update the status in the database
+            fetch(`/update-gate-pass-status/${gatePassId}/${selectedStatus}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ status: selectedStatus }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                // Optionally, you can update the UI or show a confirmation message
+            })
+            .catch(error => {
+                console.error('Error updating status:', error);
+            });
+        }
+    </script>
+</body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply for Gate Pass</title>
+    <title>Create User</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,7 +27,7 @@
             font-weight: bold;
         }
 
-        input, select {
+        input {
             width: 100%;
             padding: 8px;
             margin-bottom: 16px;
@@ -51,19 +51,24 @@
     </style>
 </head>
 <body>
-    <form action="/apply-gate-pass" method="POST">
-        <h2>Apply for Gate Pass</h2>
+    <form action="/users" method="POST">
+        <h2>Create User</h2>
 
-        <label for="place">Place:</label>
-        <input type="text" id="place" name="place" required>
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
 
-        <label for="purpose">Purpose:</label>
-        <input type="text" id="purpose" name="purpose" required>
+        <label for="roomNumber">Room Number:</label>
+        <input type="text" id="roomNumber" name="roomNumber" required>
 
-        <label for="dateTime">Date Time:</label>
-        <input type="datetime-local" id="dateTime" name="dateTime" required>
+        <label for="hostelName">Hostel Name:</label>
+        <input type="text" id="hostelName" name="hostelName" required>
 
-        <button type="submit">Submit</button>
+        <label for="rollNumber">Roll Number:</label>
+        <input type="text" id="rollNumber" name="rollNumber" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Create User</button>
     </form>
 </body>
 </html>

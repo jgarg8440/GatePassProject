@@ -3,38 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Warden Login</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      body{
+        background-image: url("https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        padding-top: 100px;
+      }
+
+    </style>
   </head>
   <body>
-    <div class="Full-sign-page">
-      <div class="sign-page-support">
-        <div class="sign-up-page">
-          <p class="sign-up-page-text">Sign in</p>
-          <div class="email-id-div">
-            <label for="email">Email Id:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter Your email "
-            />
-          </div>
-          <div class="password-id-div">
-            <label for="password">Password:</label>
-            <input
-              type="password"
-              name="email"
-              id="password"
-              placeholder="Enter Your password"
-            />
-          </div>
-          <div class="signinpage-button-div">
-            <button class="signinpage-button"><a href="http://localhost:8080/wardenhome">click here</a></button>
-            
-          </div>
-        </div>
-      </div>
-    </div>
+    <form action="wardenLogin" method="POST" style="max-width: 400px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+
+      <h2>Warden Sign In</h2>
+
+      <label for="username" style="display: block; margin-bottom: 8px; font-weight: bold;">Username:</label>
+      <input type="text" id="username" name="username" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;" required>
+
+      <label for="password" style="display: block; margin-bottom: 8px; font-weight: bold;">Password:</label>
+      <input type="password" id="password" name="password" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;" required>
+
+      <button type="submit" style="background-color: #4caf50; color: #fff; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">Sign In</button>
+
+  </form>
   </body>
 </html>

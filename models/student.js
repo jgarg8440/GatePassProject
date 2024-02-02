@@ -60,6 +60,9 @@ const studentSchema = new mongoose.Schema({
     }
 })
 
+
+
+
 const studentData = mongoose.model("studentData", studentSchema);
 module.exports = studentData; 
 
